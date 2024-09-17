@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, ABeeZee } from "next/font/google";
 import "./globals.css";
-import { Navbar } from "@/components/Navbar"; // Ensure this path is correct
+import { Navbar } from "@/components/Navbar";
 
 const inter = Inter({ subsets: ["latin"] });
+const abeezee = ABeeZee({ subsets: ["latin"], weight: "400" }); // Import ABeeZee
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -17,8 +18,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <Navbar />
+      <body className={inter.className}> {/* Use Inter font for the body */}
+        <Navbar abeezeeClass={abeezee.className} /> {/* Pass ABeeZee class */}
         {children}
       </body>
     </html>

@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-  @apply bg-darkBg text-white;
+  @apply bg-[#0b0222] text-[#F4F4F9];
 }
 
 @layer utilities {
